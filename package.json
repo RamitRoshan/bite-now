@@ -1,0 +1,23 @@
+{
+  "name": "bite-now",
+  "version": "1.0.0",
+  "description": "This is a bite now food cdelivery web app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RamitRoshan/bite-now.git"
+  },
+  "keywords": [],
+  "author": "ramit roshan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RamitRoshan/bite-now/issues"
+  },
+  "homepage": "https://github.com/RamitRoshan/bite-now#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
+}
