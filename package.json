@@ -2,8 +2,9 @@
   "name": "bite-now",
   "version": "1.0.0",
   "description": "This is a bite now food cdelivery web app",
-  "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -19,5 +20,12 @@
   "homepage": "https://github.com/RamitRoshan/bite-now#readme",
   "devDependencies": {
     "parcel": "^2.15.4"
-  }
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "browsserlist": [
+    "last 2 versions"
+  ]
 }
