@@ -1,5 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
-
+import resList from "../utils/mockData";
 
 // for geeting one particular output(here we'll get all restaurant)
 const Body = () => {
