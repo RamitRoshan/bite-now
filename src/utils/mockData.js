@@ -191,7 +191,7 @@ const resList = [
         "Burgers",
         "American"
       ],
-      "avgRating": 4.2,
+      "avgRating": 3.2,
       "parentId": "166",
       "avgRatingString": "4.2",
       "totalRatingsString": "103K+",
@@ -262,7 +262,7 @@ const resList = [
         "Fast Food",
         "Snacks"
       ],
-      "avgRating": 4.4,
+      "avgRating": 3.4,
       "parentId": "1557",
       "avgRatingString": "4.4",
       "totalRatingsString": "26K+",
@@ -565,7 +565,7 @@ const resList = [
         "Chaat",
         "Desserts"
       ],
-      "avgRating": 4.5,
+      "avgRating": 3.9,
       "veg": true,
       "parentId": "281782",
       "avgRatingString": "4.5",
@@ -661,7 +661,7 @@ const resList = [
 "wrap",
 "Healthy Food"
 ],
-"avgRating": 4.4,
+"avgRating": 3.6,
 "parentId": "2",
 "avgRatingString": "4.4",
 "totalRatingsString": "4.4K+",
@@ -902,7 +902,7 @@ const resList = [
 "Desserts",
 "Beverages"
 ],
-"avgRating": 4.3,
+"avgRating": 3.7,
 "parentId": "4961",
 "avgRatingString": "4.3",
 "totalRatingsString": "18K+",
