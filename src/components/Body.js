@@ -1,14 +1,17 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // for geeting one particular output(here we'll get all restaurant)
 const Body = () => {
 
     //Local State Variable - super powerful variable
-    const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+  const [listOfRestaurants, setListOfRestaurants] = useState(resList);
 
- 
+  useEffect(() => {
+    console.log("useeffect called");
+  }, []);
+
 
   return (
     <div className="body">
