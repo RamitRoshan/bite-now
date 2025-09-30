@@ -20,8 +20,7 @@ const Body = () => {
     const json = await data.json();
     console.log(json);
 
-    // setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-    //     ?.restaurants || []);
+    // setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle  ?.restaurants || []);
 
     const restaurants =
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
@@ -34,6 +33,7 @@ const Body = () => {
   return (
     <div className="body">
       <div className="filter">
+        
         <button 
           className="filter-btn" 
           //even listener - with call back fn
@@ -48,6 +48,7 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
+
       </div>
 
       <div className="res-container">

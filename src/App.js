@@ -17,7 +17,6 @@ const AppLayout = () => {
 };
  
 
-// console.log(jsxHeading);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

@@ -5,6 +5,7 @@ const Header = () => {
       <div className="logo-container">
         <img className="logo" src={LOGO_URL}/>
       </div>
+
       <div className="nav-items">
         <ul>
           <li>Home</li>
@@ -13,6 +14,7 @@ const Header = () => {
           <li>Cart</li>
         </ul>
       </div>
+      
     </div>
   );
 };
