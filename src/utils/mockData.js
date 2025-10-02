@@ -25,74 +25,7 @@ const resList = [
         "slaString": "25-30 mins",
         "lastMileTravelString": "1.3 km",
         "iconType": "ICON_TYPE_EMPTY"
-      },
-      "availability": {
-        "nextCloseTime": "2025-09-24 04:30:00",
-        "opened": true
-      },
-      "badges": {
-        "imageBadges": [
-          {
-            "imageId": "android/static-assets/icons/big_rx.png",
-            "description": "bolt!"
-          },
-          {
-            "imageId": "Ratnesh_Badges/Rx_Awards_2025/Bolt.png",
-            "description": "Delivery!"
-          }
-        ]
-      },
-      "isOpen": true,
-      "type": "F",
-      "badgesV2": {
-        "entityBadges": {
-          "imageBased": {
-            "badgeObject": [
-              {
-                "attributes": {
-                  "description": "bolt!",
-                  "imageId": "android/static-assets/icons/big_rx.png"
-                }
-              },
-              {
-                "attributes": {
-                  "description": "Delivery!",
-                  "imageId": "Ratnesh_Badges/Rx_Awards_2025/Bolt.png"
-                }
-              }
-            ]
-          },
-          "textBased": {},
-          "textExtendedBadges": {}
-        }
-      },
-      "aggregatedDiscountInfoV3": {
-        "header": "ITEMS",
-        "subHeader": "AT ₹119"
-      },
-      "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-          "lottie": {},
-          "video": {}
-        }
-      },
-      "reviewsSummary": {},
-      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      "restaurantOfferPresentationInfo": {},
-      "externalRatings": {
-        "aggregatedRating": {
-          "rating": "--"
-        }
-      },
-      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-    },
-    "analytics": {
-      "context": "seo-data-341e0083-1434-4e2b-886c-5062d5a48f4f"
-    },
-    "cta": {
-      "link": "https://www.swiggy.com/city/bangalore/mcdonalds-5th-block-koramangala-rest23678",
-      "type": "WEBLINK"
+      }
     }
   },
   {
@@ -119,64 +52,7 @@ const resList = [
         "slaString": "15-20 mins",
         "lastMileTravelString": "1.2 km",
         "iconType": "ICON_TYPE_EMPTY"
-      },
-      "availability": {
-        "nextCloseTime": "2025-09-24 03:00:00",
-        "opened": true
-      },
-      "badges": {
-        "imageBadges": [
-          {
-            "imageId": "android/static-assets/icons/big_rx.png",
-            "description": "bolt!"
-          }
-        ]
-      },
-      "isOpen": true,
-      "type": "F",
-      "badgesV2": {
-        "entityBadges": {
-          "imageBased": {
-            "badgeObject": [
-              {
-                "attributes": {
-                  "description": "bolt!",
-                  "imageId": "android/static-assets/icons/big_rx.png"
-                }
-              }
-            ]
-          },
-          "textBased": {},
-          "textExtendedBadges": {}
-        }
-      },
-      "aggregatedDiscountInfoV3": {
-        "header": "ITEMS",
-        "subHeader": "AT ₹119"
-      },
-      "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-          "lottie": {},
-          "video": {}
-        }
-      },
-      "reviewsSummary": {},
-      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      "restaurantOfferPresentationInfo": {},
-      "externalRatings": {
-        "aggregatedRating": {
-          "rating": "--"
-        }
-      },
-      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-    },
-    "analytics": {
-      "context": "seo-data-341e0083-1434-4e2b-886c-5062d5a48f4f"
-    },
-    "cta": {
-      "link": "https://www.swiggy.com/city/bangalore/kfc-7th-block-koramangla-rest671928",
-      "type": "WEBLINK"
+      }
     }
   },
   {
@@ -202,51 +78,7 @@ const resList = [
         "slaString": "25-30 mins",
         "lastMileTravelString": "1.6 km",
         "iconType": "ICON_TYPE_EMPTY"
-      },
-      "availability": {
-        "nextCloseTime": "2025-09-24 06:55:00",
-        "opened": true
-      },
-      "badges": {},
-      "isOpen": true,
-      "type": "F",
-      "badgesV2": {
-        "entityBadges": {
-          "imageBased": {},
-          "textBased": {},
-          "textExtendedBadges": {}
-        }
-      },
-      "aggregatedDiscountInfoV3": {
-        "header": "ITEMS",
-        "subHeader": "AT ₹59"
-      },
-      "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-          "lottie": {},
-          "video": {}
-        }
-      },
-      "reviewsSummary": {},
-      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      "restaurantOfferPresentationInfo": {},
-      "externalRatings": {
-        "aggregatedRating": {
-          "rating": "4.2",
-          "ratingCount": "4.2K+"
-        },
-        "source": "GOOGLE",
-        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-      },
-      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-    },
-    "analytics": {
-      "context": "seo-data-341e0083-1434-4e2b-886c-5062d5a48f4f"
-    },
-    "cta": {
-      "link": "https://www.swiggy.com/city/bangalore/burger-king-koramangala-rest5934",
-      "type": "WEBLINK"
+      }
     }
   },
   {
