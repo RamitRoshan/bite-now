@@ -122,61 +122,7 @@ const resList = [
           }
         ]
       },
-      "isOpen": true,
-      "type": "F",
-      "badgesV2": {
-        "entityBadges": {
-          "imageBased": {
-            "badgeObject": [
-              {
-                "attributes": {
-                  "description": "bolt!",
-                  "imageId": "android/static-assets/icons/rx_5_10_min.png"
-                }
-              },
-              {
-                "attributes": {
-                  "description": "Delivery!",
-                  "imageId": "Ratnesh_Badges/Rx_Awards_2025/Global%20Flavours.png"
-                }
-              }
-            ]
-          },
-          "textBased": {},
-          "textExtendedBadges": {}
-        }
-      },
-      "aggregatedDiscountInfoV3": {
-        "header": "ITEMS",
-        "subHeader": "AT ₹49"
-      },
-      "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-          "lottie": {},
-          "video": {}
-        }
-      },
-      "reviewsSummary": {},
-      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      "restaurantOfferPresentationInfo": {},
-      "externalRatings": {
-        "aggregatedRating": {
-          "rating": "4.2",
-          "ratingCount": "5.9K+"
-        },
-        "source": "GOOGLE",
-        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-      },
-      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
     },
-    "analytics": {
-      "context": "seo-data-341e0083-1434-4e2b-886c-5062d5a48f4f"
-    },
-    "cta": {
-      "link": "https://www.swiggy.com/city/bangalore/taco-bell-koramangala-rest11211",
-      "type": "WEBLINK"
-    }
   },
   {
     "info": {
