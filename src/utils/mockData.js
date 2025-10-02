@@ -110,18 +110,6 @@ const resList = [
         "nextCloseTime": "2025-09-24 01:00:00",
         "opened": true
       },
-      "badges": {
-        "imageBadges": [
-          {
-            "imageId": "android/static-assets/icons/rx_5_10_min.png",
-            "description": "bolt!"
-          },
-          {
-            "imageId": "Ratnesh_Badges/Rx_Awards_2025/Global%20Flavours.png",
-            "description": "Delivery!"
-          }
-        ]
-      },
     },
   },
   {
