@@ -8,6 +8,10 @@ const Body = () => {
   //Local State Variable - super powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
+  //bind my variable with input box(type in search)
+  const [searchText, setSearchText] = useState("");
+
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -33,7 +37,18 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? ( <Shimmer/> ) : (
     <div className="body">
       <div className="filter">
-        
+
+        <div className="search">
+          <input type="text" className="search-box" value={searchText}/>
+          <button 
+          onClick={() => {
+            //Filter the restaurant cards and update the UI
+            //searchText
+            
+          }}
+          >Search</button>
+        </div>
+
         <button 
           className="filter-btn" 
           //even listener - with call back fn
