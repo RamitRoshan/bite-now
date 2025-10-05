@@ -4,7 +4,7 @@
     border: 1px solid black;
 }
 .logo{
-    width: 200;
+    width: 200px;
 }
 
 .nav-items{
@@ -61,4 +61,8 @@
     width: 200px;
     height: 400px;
     background-color: #f0f0f0;
+}
+
+.login{
+    padding: 0 20px;
 }

@@ -28,13 +28,9 @@ const Body = () => {
     setListOfRestaurants(restaurants);
   };
 
-  //when we don't have any item in the list of restaurant
-  if(listOfRestaurants.length === 0){
-    return <Shimmer/>;
-  };
 
-
-  return (
+  //using ternary operator(? :) - conditional rendering
+  return listOfRestaurants.length === 0 ? ( <Shimmer/> ) : (
     <div className="body">
       <div className="filter">
         
@@ -60,7 +56,6 @@ const Body = () => {
         {listOfRestaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
-        ;
       </div>
     </div>
   );
