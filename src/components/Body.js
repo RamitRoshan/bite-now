@@ -1,11 +1,11 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
-// import resList from "../utils/mockData";
+import Shimmer from "./Shimmer";
 
 // for geeting one particular output(here we'll get all restaurant)
 const Body = () => {
 
-    //Local State Variable - super powerful variable
+  //Local State Variable - super powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
   useEffect(() => {
@@ -19,14 +19,18 @@ const Body = () => {
     //once we have data, then we have to convert it into JSON
     const json = await data.json();
     console.log(json);
-
-    // setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle  ?.restaurants || []);
-
+ 
+    //Optional Chaining(?.)
     const restaurants =
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants || [];
+      ?.restaurants || [];
 
     setListOfRestaurants(restaurants);
+  };
+
+  //when we don't have any item in the list of restaurant
+  if(listOfRestaurants.length === 0){
+    return <Shimmer/>;
   };
 
 
