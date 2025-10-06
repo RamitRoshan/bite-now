@@ -8,8 +8,13 @@ const Body = () => {
   //Local State Variable - super powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
+  //Another state vaariables only for filtered
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]); //empty
+
   //bind my variable with input box(type in search)
   const [searchText, setSearchText] = useState("");
+
+  //Whenever state variables update, react triggers a reconciliation cycle(re-renders the component)
 
 
   useEffect(() => {
@@ -30,6 +35,7 @@ const Body = () => {
       ?.restaurants || [];
 
     setListOfRestaurants(restaurants);
+    setFilteredRestaurant(restaurants);
   };
 
 
@@ -39,12 +45,18 @@ const Body = () => {
       <div className="filter">
 
         <div className="search">
-          <input type="text" className="search-box" value={searchText}/>
+          <input type="text" className="search-box" value={searchText} onChange={(e)=> { //e- event
+            setSearchText(e.target.value);
+          }}/>
           <button 
           onClick={() => {
             //Filter the restaurant cards and update the UI
             //searchText
-            
+            console.log(searchText);
+            const filteredRestaurant = listOfRestaurants.filter(
+              (res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase())
+            );
+            setFilteredRestaurant(filteredRestaurant);
           }}
           >Search</button>
         </div>
@@ -68,7 +80,7 @@ const Body = () => {
 
       <div className="res-container">
         {/* //using map to show the restaurant(can use for loop also), instead of writing individual code */}
-        {listOfRestaurants.map((restaurant) => (
+        {filteredRestaurant.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
