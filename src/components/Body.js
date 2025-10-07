@@ -35,7 +35,7 @@ const Body = () => {
       ?.restaurants || [];
 
     setListOfRestaurants(restaurants);
-    setFilteredRestaurant(restaurants);
+    setFilteredRestaurant(restaurants);  
   };
 
 
