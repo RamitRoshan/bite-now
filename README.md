@@ -19,4 +19,4 @@ This project demonstrates key frontend development practices like routing, state
 
 ---
 
-## Works going on !! Follow me for daily updates.
+# Stay Tuned!! Works going on.......
