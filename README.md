@@ -18,3 +18,5 @@ This project demonstrates key frontend development practices like routing, state
 > ⏳ Shimmer UI – Loading animation while data is fetched
 
 ---
+
+## Works going on !! Follow me for daily updates.
