@@ -12,7 +12,11 @@ const RestaurantMenu = () => {
 
     const fetchMenu = async () => {
         const data = await fetch(
-             "https://cors-handlers.vercel.app/api/?url=https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Fmenu%2Fpl%3Fpage-type%3DREGULAR_MENU%26complete-menu%3Dtrue%26lat%3D12.9352403%26lng%3D77.624532%26restaurantId%3D5934%26catalog_qa%3Dundefined%26submitAction%3DENTER"
+            // "https://cors-handlers.vercel.app/api/?url=https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Fmenu%2Fpl%3Fpage-type%3DREGULAR_MENU%26complete-menu%3Dtrue%26lat%3D12.9352403%26lng%3D77.624532%26restaurantId%3D5934%26catalog_qa%3Dundefined%26submitAction%3DENTER"
+ 
+            // "https://raw.githubusercontent.com/namastedev/namaste-react/main/swiggy-menu.json"
+
+            "https://gist.githubusercontent.com/sagaragarwal94/ba43d7f70edb3e274a57aa17a0f06e14/raw/swiggy-menu.json"
         );
         //convert it into js object
         const json = await data.json();
