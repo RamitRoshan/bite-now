@@ -25,7 +25,7 @@ const RestaurantMenu = () => {
     };
 
     //shimmer UI
-    // if(resInfo === null) return <Shimmer/>
+    if(resInfo === null) return <Shimmer/>
 
  
 
