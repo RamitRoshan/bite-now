@@ -3,7 +3,7 @@ import Shimmer from "./Shimmer";
 
 const RestaurantMenu = () => {
 
-    // const [resInfo, setResInfo] = useState(null);
+    const [resInfo, setResInfo] = useState(null);
 
      
     useEffect(() => {
@@ -30,7 +30,7 @@ const RestaurantMenu = () => {
  
 
 
-    // const{name, cuisines, costForTwoMessage} = resInfo?.cards[2]?.card?.card?.info || {};
+    const{name, cuisines, costForTwoMessage} = resInfo?.cards[2]?.card?.card?.info || {};
 
    
 
