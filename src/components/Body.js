@@ -27,7 +27,7 @@ const Body = () => {
 
        
       // "https://raw.githubusercontent.com/namastedev/namaste-react/main/swiggy-api"
-
+ 
       "https://cors-handlers.vercel.app/api/?url=https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D12.9966135%26lng%3D77.5920581%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING"
     );
     
@@ -49,7 +49,9 @@ const Body = () => {
 
   //using ternary operator(? :) - conditional rendering
   return listOfRestaurants.length === 0 ? ( <Shimmer/> ) : (
-    <div className="body">
+   
+   <div className="body">
+
       <div className="filter">
 
         <div className="search">
@@ -86,12 +88,14 @@ const Body = () => {
 
       </div>
 
+
       <div className="res-container">
         {/* //using map to show the restaurant(can use for loop also), instead of writing individual code */}
         {filteredRestaurant.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
+
     </div>
   );
 };
