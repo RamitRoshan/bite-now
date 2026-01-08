@@ -17,6 +17,7 @@ const Header = () => {
 
   return (
     <div className="header">
+      
       <div className="logo-container">
         <img className="logo" src={LOGO_URL}/>
       </div>
@@ -36,7 +37,7 @@ const Header = () => {
           <button 
           className="login" 
           onClick={() => { 
-            //if btnname is login then update setbtnname withlogout & vice-versa 
+            //if btnname is login then update setbtnname with logout & vice-versa 
             btnNameReact === "Login" ? setBtnNameReact("Logout") :
             setBtnNameReact("Login");
           }}

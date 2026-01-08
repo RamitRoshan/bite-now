@@ -57,6 +57,7 @@ const Body = () => {
         <div className="search">
           <input 
             type="text" 
+            placeholder="Enter your fav dish"
             className="search-box" 
             value={searchText}
             //e- event 
