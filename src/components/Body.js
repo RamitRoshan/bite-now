@@ -8,7 +8,7 @@ const Body = () => {
   //Local State Variable - super powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
-  //Another state vaariables only for filtered
+  //Another state variables only for filtered
   const [filteredRestaurant, setFilteredRestaurant] = useState([]); //empty
 
   //bind my variable with input box(type in search)
@@ -55,11 +55,14 @@ const Body = () => {
       <div className="filter">
 
         <div className="search">
-          <input type="text" className="search-box" value={searchText} onChange={(e)=> { //e- event
-            setSearchText(e.target.value);
-          }}/>
-          <button 
-          onClick={() => {
+          <input 
+            type="text" 
+            className="search-box" 
+            value={searchText}
+            //e- event 
+            onChange={(e)=> { setSearchText(e.target.value)}}
+          />
+          <button onClick={() => {
             //Filter the restaurant cards and update the UI
             //searchText
             console.log(searchText);
@@ -71,13 +74,14 @@ const Body = () => {
           >Search</button>
         </div>
 
+
         <button 
           className="filter-btn" 
-          //even listener - with call back fn
+          //even listener(onClick) - with call back fn
           onClick={() => {
             // to get restaurant more rating than 4.5, we use filter logic here
             const filteredList = listOfRestaurants.filter(
-                (res) => parseFloat(res.info.avgRating) >4.2
+                (res) => parseFloat(res.info.avgRating) >4.4
             );
             //update state variable
             setListOfRestaurants(filteredList);
