@@ -9,7 +9,7 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
   //Another state variables only for filtered
-  const [filteredRestaurant, setFilteredRestaurant] = useState([]); //empty
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]); //empty i.e will give in the form of list(array)
 
   //bind my variable with input box(type in search)
   const [searchText, setSearchText] = useState("");
@@ -68,6 +68,7 @@ const Body = () => {
             //searchText
             console.log(searchText);
             const filteredRestaurant = listOfRestaurants.filter(
+              //even we type in rendom order or capital , small it will search here we use .toLowerCase()
               (res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase())
             );
             setFilteredRestaurant(filteredRestaurant);
