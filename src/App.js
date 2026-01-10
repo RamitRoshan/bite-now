@@ -41,7 +41,8 @@ const appRouter = createBrowserRouter([
         element: <Contact/>,
       },
       {
-        //this part of url has a Dynamics path, every restaurant has different data
+        //this part of url has a Dynamics path, as every restaurant has different data
+        // here :resId is a dynamic and it can change acc to the id of restaurants
         path: "/restaurants/:resId",
         element: <RestaurantMenu/>
       },
