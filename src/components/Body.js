@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 // for geeting one particular output(here we'll get all restaurant)
 const Body = () => {
@@ -47,6 +48,9 @@ const Body = () => {
       )
       ?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
 
+    //getting ID of restaurants
+    console.log(restaurants.map(r => r.info.id));
+  
     setListOfRestaurants(restaurants);
     setFilteredRestaurant(restaurants);  
   };
@@ -106,7 +110,13 @@ const Body = () => {
       <div className="res-container">
         {/* //using map to show the restaurant(can use for loop also), instead of writing individual code */}
         {filteredRestaurant.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          //Key should be in parent JSX
+          <Link 
+            key={restaurant.info.id} 
+            to={"/restaurants/" + restaurant.info.id}
+          >
+            <RestaurantCard resData={restaurant} />
+          </Link>
         ))}
       </div>
 

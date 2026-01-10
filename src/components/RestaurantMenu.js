@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { useParams } from "react-router-dom"; 
+import { MENU_API } from "../utils/constants";
 
 const RestaurantMenu = () => {
 
     const [resInfo, setResInfo] = useState(null);
+
+    const {resId} = useParams(); 
 
     //empty-dependency array, i.e API will call once after initial render
     useEffect(() => {
@@ -11,17 +15,16 @@ const RestaurantMenu = () => {
     }, []);
 
     const fetchMenu = async () => {
-        const data = await fetch(
-            // "https://cors-handlers.vercel.app/api/?url=https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Fmenu%2Fpl%3Fpage-type%3DREGULAR_MENU%26complete-menu%3Dtrue%26lat%3D12.9966135%26lng%3D77.5920581%26restaurantId%3D448012%26catalog_qa%3Dundefined%26submitAction%3DENTER"
+        // const data = await fetch(
+        //     `https://namastedev.com/api/v1/listRestaurantMenu/${resId}`
+        // );
 
-            // "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9966135&lng=77.5920581&restaurantId=448012&catalog_qa=undefined&submitAction=ENTER"
+        const data = await fetch(MENU_API + resId);
 
-            "https://namastedev.com/api/v1/listRestaurantMenu/123456"
-        );
-        //convert it into js object
+        //Converts JSON text → JavaScript object
         const json = await data.json();
-        console.log(json);
-        setResInfo(json.data);
+        //console.log(json);
+        setResInfo(json.data); // store restaurant menu data in state and re-render UI
     };
 
     //shimmer UI
@@ -52,7 +55,7 @@ const RestaurantMenu = () => {
     return (
         <div className="menu">
             <h1>{name}</h1>
-            <p>{cuisines.join(", ")} - {costForTwoMessage}</p>
+            <p>{cuisines?.join(", ") || "Cuisine not available"} - {costForTwoMessage}</p>
             {/* <h3>{costForTwoMessage}</h3> */}
  
             <h2>Menu</h2>
@@ -79,3 +82,18 @@ const RestaurantMenu = () => {
 export default RestaurantMenu;
 
 
+
+/*
+To check restaurant with id, we can use these ID
+"123456",
+"234567",
+"345678",
+"456789",
+"567890",
+"678901",
+"789012",
+"890123",
+"901234"
+
+here we hae to type:  http://localhost:1234/restaurants/123456
+*/
