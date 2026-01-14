@@ -38,9 +38,9 @@ const Contact = () => {
             <section className="contact-details">
                 <h3>Contact Information</h3>
                 <ul>
-                    <li><b>Phone:</b> +91 9931970143</li>
-                    <li><b>Email:</b> hello@bitenow.com</li>
-                    <li><b>Location:</b> 4/91 BTM Layout, Bengaluru</li>
+                    <li><b>Phone :</b> +91 9931970143</li>
+                    <li><b>Email :</b> hello@bitenow.com</li>
+                    <li><b>Location :</b> 4/91 BTM Layout, Bengaluru</li>
                 </ul>
             </section>
 
@@ -48,9 +48,9 @@ const Contact = () => {
 
             <section className="hours-operation">
                 <h3>Hours of Operation</h3>
-                <p><b>Monday -</b> Thursday: 11:00 AM - 10:00 PM</p>
-                <p><b>Friday -</b> Saturday: 11:00 AM - 11:00 PM</p>
-                <p> <b>Sunday:</b> 10:00 AM - 9:00 PM</p>
+                <p><b>Monday - Thursday : </b> 11:00 AM - 10:00 PM</p>
+                <p><b>Friday - Saturday : </b> 11:00 AM - 11:00 PM</p>
+                <p> <b>Sunday :</b> 10:00 AM - 9:00 PM</p>
             </section>
         </div>
     );
