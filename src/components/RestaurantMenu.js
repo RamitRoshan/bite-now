@@ -1,31 +1,34 @@
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom"; 
-import { MENU_API } from "../utils/constants";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
+// import { MENU_API } from "../utils/constants";
 
 const RestaurantMenu = () => {
 
-    const [resInfo, setResInfo] = useState(null);
+    //const [resInfo, setResInfo] = useState(null);
 
+    //useParams hook gives us a resID
     const {resId} = useParams(); 
 
+    const resInfo = useRestaurantMenu(resId);
+
     //empty-dependency array, i.e API will call once after initial render
-    useEffect(() => {
-        fetchMenu();
-    }, []);
+    // useEffect(() => {
+    //     fetchMenu();
+    // }, []);
+    // const fetchMenu = async () => {
+    //     // const data = await fetch(
+    //     //     `https://namastedev.com/api/v1/listRestaurantMenu/${resId}`
+    //     // );
 
-    const fetchMenu = async () => {
-        // const data = await fetch(
-        //     `https://namastedev.com/api/v1/listRestaurantMenu/${resId}`
-        // );
+    //     const data = await fetch(MENU_API + resId);
 
-        const data = await fetch(MENU_API + resId);
-
-        //Converts JSON text → JavaScript object
-        const json = await data.json();
-        //console.log(json);
-        setResInfo(json.data); // store restaurant menu data in state and re-render UI
-    };
+    //     //Converts JSON text → JavaScript object
+    //     const json = await data.json();
+    //     //console.log(json);
+    //     setResInfo(json.data); // store restaurant menu data in state and re-render UI
+    // };
 
     //shimmer UI
     if(resInfo === null) return <Shimmer/>
@@ -59,12 +62,6 @@ const RestaurantMenu = () => {
             {/* <h3>{costForTwoMessage}</h3> */}
  
             <h2>Menu</h2>
-            {/* <ul>
-                {itemCards.map()}
-                <li>itemCards[0].card.info.name</li>
-                <li>Burger</li>
-                <li>Diet Coke</li>
-            </ul>  */}
             <ul>
                {itemCards.map((item) => (
                 <li key={item.card.info.id}>

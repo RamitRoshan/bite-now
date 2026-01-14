@@ -23,12 +23,9 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch( 
-      // "https://raw.githubusercontent.com/namastedev/namaste-react/main/swiggy-api"
- 
-      // "https://cors-handlers.vercel.app/api/?url=https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D12.9966135%26lng%3D77.5920581%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING"
-
+    const data = await fetch(   
       "https://namastedev.com/api/v1/listRestaurants"
+      // "https://cors-handlers.vercel.app/api/?url=https%3A%2F%2Fnamastedev.com%2Fapi%2Fv1%2FlistRestaurants"
     );
     
 
