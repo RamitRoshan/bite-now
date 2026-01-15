@@ -24,3 +24,7 @@ const useRestaurantMenu = (resId) => {
 }
 
 export default useRestaurantMenu;
+
+
+//contract of useRestaurantMenu custom hooks is , input
+//was resId and it returns resInfo
