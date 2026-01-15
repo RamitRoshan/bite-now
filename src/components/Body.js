@@ -2,9 +2,14 @@ import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
-// for geeting one particular output(here we'll get all restaurant)
+ 
 const Body = () => {
+
+
+  // Always call custom hooks at the top
+  const onlineStatus = useOnlineStatus(); 
 
   //Local State Variable - super powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -16,6 +21,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   //Whenever state variables update, react triggers a reconciliation cycle(re-renders the component)
+  console.log("Body rendered");
 
 
   useEffect(() => {
@@ -52,6 +58,13 @@ const Body = () => {
     setFilteredRestaurant(restaurants);  
   };
 
+  //when online status is false
+  if(onlineStatus === false)
+    return (
+      <h1>
+        oops you're offline😥!! Please check your internet connection.
+      </h1>
+    );
 
   //using ternary operator(? :) - conditional rendering
   return listOfRestaurants.length === 0 ? ( <Shimmer/> ) : (

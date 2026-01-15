@@ -21,3 +21,6 @@ const useOnlineStatus = () => {
 }
 
 export default useOnlineStatus;
+
+
+// when user is offline, or no internet we can add some dyno games there also to make user engage on the website.
