@@ -71,33 +71,35 @@ const Body = () => {
    
    <div className="body">
 
-      <div className="filter">
+      <div className="filter flex">
 
-        <div className="search">
+        <div className="search m-4 p-4">
           <input 
             type="text" 
             placeholder="Enter your fav dish"
-            className="search-box" 
+            className=" border border-solid border-black" 
             value={searchText}
             //e- event 
             onChange={(e)=> { setSearchText(e.target.value)}}
           />
-          <button onClick={() => {
-            //Filter the restaurant cards and update the UI
-            //searchText
-            console.log(searchText);
-            const filteredRestaurant = listOfRestaurants.filter(
-              //even we type in rendom order or capital , small it will search here we use .toLowerCase()
-              (res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase())
-            );
-            setFilteredRestaurant(filteredRestaurant);
-          }}
+          <button className="px-4 py-2 rounded-3xl hover:bg-green-900 bg-green-500 m-3"
+            onClick={() => {
+              //Filter the restaurant cards and update the UI
+              //searchText
+              console.log(searchText);
+
+              const filteredRestaurant = listOfRestaurants.filter(
+                //even we type in rendom order or capital , small it will search here we use .toLowerCase()
+                (res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setFilteredRestaurant(filteredRestaurant);
+            }}
           >Search</button>
         </div>
 
-
+        <div className="m-4 p-4 flex items-center">
         <button 
-          className="filter-btn" 
+          className="px-4 py-2 bg-gray-400 rounded-lg hover:bg-white" 
           //even listener(onClick) - with call back fn
           onClick={() => {
             // to get restaurant more rating than 4.5, we use filter logic here
@@ -113,11 +115,12 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
+        </div>
 
       </div>
 
 
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {/* //using map to show the restaurant(can use for loop also), instead of writing individual code */}
         {filteredRestaurant.map((restaurant) => (
           //Key should be in parent JSX
