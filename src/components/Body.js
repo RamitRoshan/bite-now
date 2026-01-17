@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -13,15 +13,16 @@ const Body = () => {
 
   //Local State Variable - super powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
-
   //Another state variables only for filtered
   const [filteredRestaurant, setFilteredRestaurant] = useState([]); //empty i.e will give in the form of list(array)
 
   //bind my variable with input box(type in search)
   const [searchText, setSearchText] = useState("");
 
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+
   //Whenever state variables update, react triggers a reconciliation cycle(re-renders the component)
-  console.log("Body rendered");
+  console.log("Body rendered", listOfRestaurants);
 
 
   useEffect(() => {
@@ -128,7 +129,13 @@ const Body = () => {
             key={restaurant.info.id} 
             to={"/restaurants/" + restaurant.info.id}
           >
-            <RestaurantCard resData={restaurant} />
+            {/*if the restaurant is promoted then add a promoted label to it i.e if-else */}
+            {restaurant.info.promoted ? (
+              <RestaurantCardPromoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
+            
           </Link>
         ))}
       </div>

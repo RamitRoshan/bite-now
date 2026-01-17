@@ -20,8 +20,23 @@ const RestaurantCard = (props) => {
       <h4>Delivery: {slaString}</h4>
     </div>
   );
-
-
 };
+
+// Higher Order Component
+//Input - RestaurantCard => RestaurantCardPromoted
+//withPromotedLabel -> higher order fn, it takes restaurant card as input
+export const withPromotedLabel = (RestaurantCard) => {
+  //functional component (return new component)
+  return (props) => {
+    return (
+      <div className="relative">
+        <label className="absolute top-0 left-0 bg-yellow-400 text-black text-xs px-2 py-1 rounded">
+          Promoted
+        </label>
+        <RestaurantCard {...props}/>
+      </div>
+    )  
+  }
+}
 
 export default RestaurantCard;
