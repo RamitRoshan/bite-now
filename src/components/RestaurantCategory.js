@@ -1,18 +1,18 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestaurantCategory = ({data}) => {
+//props
+const RestaurantCategory = ({data, showItems, setShowIndex, dummy}) => {
 
     // console.log(data);
 
     //state variable will decide whether itemlist will shown or not
     //bydefault -use false here 
-    const [showItems, setShowItems] = useState(false);
+    // const [showItems, setShowItems] = useState(false);
 
     
-    const handleClick = () => {
-        //if showitems is true, make it false and if showitems is false make it true
-        setShowItems(!showItems);
+    const handleClick = () => { 
+        setShowIndex();
     }
     return (
         <div>
@@ -35,7 +35,7 @@ const RestaurantCategory = ({data}) => {
 
                 {/* Accordian Body ,
                 when showItem is true then show the items*/}
-                {showItems && <ItemList items={data.itemCards}/>}
+                {showItems && <ItemList items={data.itemCards} dummy={dummy}/>}
             </div>
 
         </div>

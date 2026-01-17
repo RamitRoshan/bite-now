@@ -14,6 +14,12 @@ const RestaurantMenu = () => {
 
     const resInfo = useRestaurantMenu(resId);
 
+    const dummy = "Dummy data"; 
+
+    //it will show the indexlist of dish like if index = 0, 1st willbe open
+    //if index=1, 2md will be open and all will be colapse
+    const [showIndex, setShowIndex] = useState(null);
+
     //empty-dependency array, i.e API will call once after initial render
     // useEffect(() => {
     //     fetchMenu();
@@ -22,9 +28,7 @@ const RestaurantMenu = () => {
     //     // const data = await fetch(
     //     //     `https://namastedev.com/api/v1/listRestaurantMenu/${resId}`
     //     // );
-
     //     const data = await fetch(MENU_API + resId);
-
     //     //Converts JSON text → JavaScript object
     //     const json = await data.json();
     //     //console.log(json);
@@ -64,11 +68,14 @@ const RestaurantMenu = () => {
     
 
             {/* categories accodians*/}
-            {categories.map((category) => (
-                //controlled components
+            {categories.map((category, index) => (
+                //Restaurant Category is a controlled components
                 <RestaurantCategory
                 key={category?.card?.card.title}
                 data={category?.card?.card}
+                showItems={index === showIndex ? true : false} //if index is 0 then true
+                setShowIndex = {() => setShowIndex(index)}
+                dummy={dummy}
                 />
             ))}
 
