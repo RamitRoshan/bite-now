@@ -32,16 +32,16 @@ class UserClass extends React.Component {
         userInfo: json, //put json inside userInfo
        });
 
-       console.log(json);
+    //    console.log(json);
     }
 
     //it called -> after the update cycle.
     componentDidUpdate(){
-        console.log("Component Did Update");
+        //console.log("Component Did Update");
     }
 
     componentWillUnmount(){
-        console.log("Component Will Unmount");
+        //console.log("Component Will Unmount");
     }
 
 

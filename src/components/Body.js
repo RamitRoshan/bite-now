@@ -1,8 +1,9 @@
 import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
  
 const Body = () => {
@@ -39,7 +40,7 @@ const Body = () => {
 
     //once we have data, then we have to convert it into JSON
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
  
     //Optional Chaining(?.)
     // const restaurants =
@@ -53,7 +54,7 @@ const Body = () => {
       ?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
 
     //getting ID of restaurants
-    console.log(restaurants.map(r => r.info.id));
+    // console.log(restaurants.map(r => r.info.id));
   
     setListOfRestaurants(restaurants);
     setFilteredRestaurant(restaurants);  
@@ -66,6 +67,8 @@ const Body = () => {
         oops you're offline😥!! Please check your internet connection.
       </h1>
     );
+
+  const {loggedInUser, setUserName} = useContext(UserContext);  
 
   //using ternary operator(? :) - conditional rendering
   return listOfRestaurants.length === 0 ? ( <Shimmer/> ) : (
@@ -118,6 +121,16 @@ const Body = () => {
         </button>
         </div>
 
+
+        <div className="search m-4 p-4 flex items-center">
+          <label className="m-2">UserName: </label>
+          <input
+          className="border border-black p-2"
+          value={loggedInUser}
+          onChange={(e)=> setUserName(e.target.value)}
+          />
+        </div>
+
       </div>
 
 
@@ -138,7 +151,7 @@ const Body = () => {
             
           </Link>
         ))}
-      </div>
+      </div> 
 
     </div>
   );
