@@ -3,10 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 const cartSlice = createSlice({
     name: 'cart',
     initialState: {
-        //cart items, initially I am giving it as empty array
-        items: []
+        //cart items, initially I'll be giving it as empty array
+        items: [],
     },
+    //reducers is an object & it has an diff. types of action we can take.
     reducers: {
+        //mutating -> we'r directly modifying the state over here.
         addItem: (state, action) => {
             //items is a array and I will push the action.payload inside it, also updating the state
             state.items.push(action.payload);

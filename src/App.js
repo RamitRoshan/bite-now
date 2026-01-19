@@ -11,7 +11,8 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
-import appStore from "./utils/appStore";
+import appStore from "./utils/appStore"; 
+import Cart from "./components/Cart";
 // import Grocery from "./components/Grocery";
 
 //lazy loading of Grocery
@@ -85,6 +86,10 @@ const appRouter = createBrowserRouter([
         // here :resId is a dynamic and it can change acc to the id of restaurants
         path: "/restaurants/:resId",
         element: <RestaurantMenu/>
+      },
+      {
+        path: "/cart",
+        element: <Cart/>,
       },
     ],
     errorElement: <Error/>,
