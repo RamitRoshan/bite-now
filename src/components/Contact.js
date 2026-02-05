@@ -18,6 +18,7 @@
  
 
 const Contact = () => {
+    
   return (
     <div className="max-w-[800px] mx-auto my-10 p-5 font-sans leading-relaxed text-gray-800 bg-white rounded-lg shadow-md md:p-6 sm:mx-5">
       
