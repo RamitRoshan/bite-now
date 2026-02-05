@@ -8,7 +8,7 @@ test("Should load contact us component", () => {
     render(<Contact/>);
 
     //it will render heading here
-    const heading = screen.getAllByRole("heading");
+    const heading = screen.getByRole("heading");
 
     //Assertion
     expect(heading).toBeInTheDocument();
