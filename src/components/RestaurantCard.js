@@ -5,6 +5,8 @@ import UserContext from "../utils/UserContext";
 const RestaurantCard = (props) => {
   // destructuring data
   const {resData} = props;
+  //console.log(resData);
+
   const {loggedInUser} = useContext(UserContext);
 
   const {cloudinaryImageId, name, avgRating, cuisines, costForTwo, sla: {slaString}} = resData?.info; 
