@@ -18,9 +18,9 @@
  
 
 const Contact = () => {
-    
+
   return (
-    <div className="max-w-[800px] mx-auto my-10 p-5 font-sans leading-relaxed text-gray-800 bg-white rounded-lg shadow-md md:p-6 sm:mx-5">
+    <div className="max-w-200 mx-auto my-10 p-5 font-sans leading-relaxed text-gray-800 bg-white rounded-lg shadow-md md:p-6 sm:mx-5 text-center">
       
       <h1 className="text-4xl font-bold text-gray-800 mb-5 border-b-4 border-orange-500 inline-block">
         Get in Touch

@@ -19,3 +19,26 @@ test("Should load contact us component", () => {
     //Assertion
     expect(heading).toBeInTheDocument();
 });
+
+
+//testing one more thing inside the contacts
+//testing wheather email is visible or not
+test("Should display email address", () => {
+    
+    render(<Contact/>);
+
+      
+    const email = screen.getByText(/hello@bitenow.com/i);
+
+    //Assertion
+    expect(email).toBeInTheDocument();
+});
+
+//another new test cases: Phone no. is visible
+test("Should display phone number", () => {
+    render(<Contact/>);
+
+    const phone = screen.getByText(/\+91 9931970143/i);
+    expect(phone).toBeInTheDocument(); 
+})
+ 
