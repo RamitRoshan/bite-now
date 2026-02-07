@@ -4,7 +4,10 @@ import { render, screen } from "@testing-library/react"
 import Contact from "../Contact"
 import "@testing-library/jest-dom";
 
-test("Should load contact us component", () => {
+
+describe("Contact Us Page Test Case", () => {
+
+    test("Should load contact us component", () => {
     //render this contact on JS-DOM
     render(<Contact/>);
 
@@ -18,7 +21,7 @@ test("Should load contact us component", () => {
 
     //Assertion
     expect(heading).toBeInTheDocument();
-});
+   });
 
 
 //testing one more thing inside the contacts
@@ -38,7 +41,13 @@ test("Should display email address", () => {
 test("Should display phone number", () => {
     render(<Contact/>);
 
+    //Querying
     const phone = screen.getByText(/\+91 9931970143/i);
+    //Assertion
     expect(phone).toBeInTheDocument(); 
 })
+
+});
+
+ 
  
