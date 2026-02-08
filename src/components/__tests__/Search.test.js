@@ -53,3 +53,31 @@ test("Should Search Res List for burger text input " , async() => {
     //assertion
     //expect(searchBtn).toBeInTheDocument();
 })
+
+
+
+//Writing Test case for Top Rated Restaurent 
+test("Should filter Top Rated Restaurant", async () => {
+    await act(async () => 
+        render(
+            <BrowserRouter>
+            <Body/>
+            </BrowserRouter>
+        )
+    );
+
+    const cardsBeforSearch = screen.getAllByTestId("resCard");
+
+    //initial card length should be 9, but later after change it should be 1(when we search burger)
+    expect(cardsBeforSearch.length).toBe(9);
+
+    const topRatedBtn = screen.getByRole("button", {name: "Top Rated Restaurant"});
+    //call the events(click the btn)
+    fireEvent.click(topRatedBtn);
+
+    //once we click on the btn of top rated restaurant then it should show 5 which is actuall top rated
+    const cardsAfterFilter = screen.getAllByTestId("resCard");
+    //assertion
+    expect(cardsAfterFilter.length).toBe(5);
+
+})
