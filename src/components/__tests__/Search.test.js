@@ -17,7 +17,7 @@ global.fetch = jest.fn(() => {
 });
 
 
-test("should render the Body Component with Search" , async() => {
+test("Should Search Res List for burger text input " , async() => {
 
     await act(async () => 
         render(
@@ -26,6 +26,11 @@ test("should render the Body Component with Search" , async() => {
             </BrowserRouter>
         )
     );
+
+    const cardsBeforSearch = screen.getAllByTestId("resCard");
+
+    //initial card length should be 9, but later after chnage it should be 1(when we search burger)
+    expect(cardsBeforSearch.length).toBe(9);
 
     const searchBtn = screen.getByRole("button", {name: "Search"});
 
@@ -40,10 +45,11 @@ test("should render the Body Component with Search" , async() => {
     //screen should load 4 restaurant cards 
 
     //all the ele. which have testId of resCard, give me all the element
-    const cards = screen.getAllByTestId("resCard");
-    //expect cards length should be 4(crads)
-    expect(cards.length).toBe(4);
+    const cardsAfterSearch = screen.getAllByTestId("resCard");
+    
+    //expect cards length should be 1(crads), after search
+    expect(cardsAfterSearch.length).toBe(1);
 
     //assertion
-    expect(searchBtn).toBeInTheDocument();
+    //expect(searchBtn).toBeInTheDocument();
 })
