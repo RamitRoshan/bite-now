@@ -23,7 +23,7 @@ test("should Load Restaurant Menu Component", async() => {
     
     await act(async () => 
         render(
-            //there is a link inside the HEader component, so we will give Browser Router
+            //there is a link inside the Header component, so we will give Browser Router
             <BrowserRouter>
             <Provider store={appStore}>
               <Header/>

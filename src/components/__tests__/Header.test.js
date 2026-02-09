@@ -28,7 +28,7 @@ test("Should render Header Component with a login button", () => {
 });   
 
 
-//another test cases fir Header Components
+//another test cases for Header Components
 test("Should render Header Component with a Cart items 0 ", () => {
 
     render(
